@@ -1,0 +1,125 @@
+*{
+    margin:0; 
+    padding:0;
+    font-family:'Times New Roman', Times, serif; 
+    box-sizing: border-box; 
+
+}
+
+body{
+    background:#0A0A0B; 
+    color: #fff; 
+
+}
+.outer-container{
+    margin: 12%; 
+    width: 100%; 
+    max-width: 700px; 
+
+}
+.copy-icon{
+    filter: brightness(0) invert(1); 
+    width:24px;
+    position:absolute;
+    top:50%;
+    right:15px;
+    transform:translateY(-50%);
+    z-index:1;
+    cursor:pointer;
+}
+.inner-container{
+    display:flex; 
+    flex-direction:column;
+    align-items:center; 
+    gap:16px;
+    padding: 30px; 
+    width:100%; 
+    margin-top: 45px; 
+    margin-bottom:28px;
+    color:#FF4D5E;
+    background: #3A262C; 
+    border-radius:7px;
+
+}
+.outer-container h1 span{
+    color:#FF4D5E; 
+    padding-bottom:10px;
+    border-bottom: 2px solid #FF8A94;
+}
+.outer-container h1{
+    font-weight:500px; 
+    font-size: 50px;
+}
+.outer-container input{
+    border:0; 
+    outline:0; 
+    font-size: 25px;
+    background-color:#0A0A0B; 
+    color:#fff;
+    padding:15px 55px 15px 15px;
+    border-radius:15px;
+    width:100%;
+}
+.password-box{
+    position:relative;
+    flex:1 1 0;
+    min-width:0;
+}
+.inner-container  button img{
+    width:28px; 
+    margin-right: 10px;
+}
+.inner-container button{
+    border:0; 
+    outline:0;
+    background:#7A0F2B; 
+    font-size:22px; 
+    font-weight:300;
+    display: flex;
+    align-items:center; 
+    justify-content: center; 
+    padding: 16px 26px; 
+    border-radius:5px; 
+    cursor:pointer;
+
+}
+
+
+
+
+
+
+
+
+
+
+.length-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.length-field label {
+  font-size: 15px;
+  font-weight: 500;
+  color: #FF4D5E;
+}
+
+.length-field input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 16px;
+  background: #0A0A0B;
+  border: 1px solid #3A262C;
+  border-radius: 10px;
+  color: #FF8A94;
+  font-size: 18px;
+  font-weight: 700;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+
+.length-field small {
+  font-size: 13px;
+  color: #A8979C;
+}
