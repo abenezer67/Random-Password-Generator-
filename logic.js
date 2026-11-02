@@ -4,21 +4,43 @@ const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowerCase = "abcdefghijklmnopqrstuvwxyz";
 const number = "0123456789";
 const symbol = `!@#$%^&*()_+-=[]{}|;:'",.<>/?~`;
-const randChars = upperCase + lowerCase + number + symbol;
+const includeUpperCase = document.getElementById("option1");
+const includeLowerCase = document.getElementById("option2");
+const includeSymbols = document.getElementById("option3");
+const includenumbers = document.getElementById("option4");
+
+
 
 function createPassword() {
-  let password = "";
-  const length = parseInt(lengthInput.value, 10);
-  password += upperCase[Math.floor(Math.random() * upperCase.length)];
-  password += lowerCase[Math.floor(Math.random() * lowerCase.length)];
-  password += number[Math.floor(Math.random() * number.length)];
-  password += symbol[Math.floor(Math.random() * symbol.length)];
+  let password = ""
+  let chars = " ";
 
-  while (length > password.length) {
-    password += randChars[Math.floor(Math.random() * randChars.length)];
-  }
+  const length = parseInt(lengthInput.value, 10);
+ 
+   chars += includeUpperCase.checked ?upperCase : "";
+   chars += includeLowerCase.checked ? lowerCase : "";
+   chars += includeSymbols.checked ? symbol : "";
+   chars += includenumbers.checked ?  number: "";
+
+   
+if(length <= 0){
+    alert( `password length must be atleast 1`); 
+    return;
+}
+if(chars.length === 0){
+    alert( `At least one set of Chars needs to be selected`);
+    return;
+}
+  
+    for(let i = 0 ; i < length ; i++){
+        const randomIndex = Math.floor(Math.random()* chars.length);
+        password += chars[randomIndex];
+    }
+      
   passwordBox.value = password;
 }
+
+
 
 function copyPassword() {
   if (!passwordBox.value) return;

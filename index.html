@@ -19,16 +19,22 @@
   <label for="length">Please choose Password length</label>
   <input  type="number" id="length" min="8" max="64" value="16" inputmode="numeric">
   <small>Choose between 8 and 64 characters</small>
+
+
+    <div class="choices">
+
+        <label for="option1"><input type="checkbox" id="option1" name="choice">Include UpperCase</label>
+        <label for="option2"><input type="checkbox" id="option2" name="choice">Include LowerCase</label>
+        <label for="option3"><input type="checkbox" id="option3" name="choice">Include Symbols</label>
+        <label for="option4"><input type="checkbox" id="option4" name="choice">Include numbers</label>
+
+</div>
 </div>
             <button onclick="createPassword()"><img src="images/rotate-right-solid-full.svg" alt="">Generate Password</button>
 
-        </div>
-
-
-
-        
-        
+        </div>    
     </div>
+  
     <script src = "logic.js"></script>
 </body>
 </html> 
