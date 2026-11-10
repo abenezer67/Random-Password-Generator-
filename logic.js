@@ -45,4 +45,5 @@ if(chars.length === 0){
 function copyPassword() {
   if (!passwordBox.value) return;
   navigator.clipboard.writeText(passwordBox.value);
+  alert("linked copied"); 
 }
